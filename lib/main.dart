@@ -44,7 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState () {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      _percentage = int.parse(await widget.storage.read(key: "percentage") as String);
+      var storedPercentage = await widget.storage.read(key: "percentage");
+      if (storedPercentage != null) _percentage = int.parse(storedPercentage);
       setState(() {});
     });
   }
@@ -77,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text("How often will yes appear?",
+                      Text("How often yes will appear?",
                           style: Theme.of(context).textTheme.labelLarge),
                       Padding(
                           padding: const EdgeInsets.only(top: 15.0),
@@ -162,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
           tooltip: 'Draw',
           child: GestureDetector(
             onLongPress: changePercentage,
-            child: !_hide ? Text("$_percentage%") : const Icon(Icons.star),
+            child: _hide ? const Icon(Icons.star) : Text("$_percentage%"),
           )),
     );
   }

@@ -1,16 +1,14 @@
-# yesorno
+# YesOrNo? Flutter App
 
 A project that will make your choices easier
+Just click a button to get a random answser
 
-## Getting Started
+Made as a side fun hobby project, so you all have full allowance to make your life choices based on that app
 
-This project is a starting point for a Flutter application.
+~~I will try to link the apk somewhere on this repository
 
-A few resources to get you started if this is your first Flutter project:
+I dont know if it works on ios as i cant test that~~
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Quick lookaround
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Hold the randomize button if you want to open the settings 
